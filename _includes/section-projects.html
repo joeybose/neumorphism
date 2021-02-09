@@ -5,11 +5,30 @@
       <div class="project neumorphism-card" data-aos="zoom-in-down">
         <div class="name-link-wrapper">
           <h3>{{project.name}}</h3>
+          <h3><strong>{{project.conf}}</strong></h3>
         </div>
+        <div class="name-link-wrapper">
+          <h3>{{project.authors}}</h3>
+        </div>
+    {% if project.image_link %}
+    <img src={{project.image_link}} alt="",
+     style="border-radius:0%;height: 50%;width: 90%;margin-left:
+     auto;margin-right: auto;position: relative;display: block;">
+    {% endif %}
         <p class="project-desc">{{project.descr}}</p>
-        {% if project.demo %}
-          <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noreferrer">
-            Demo
+        {% if project.arxiv %}
+          <a class="highlight-link" href="{{project.arxiv}}" target="_blank" rel="noreferrer">
+            arxiv
+          </a>
+        {% endif %}
+        {% if project.git %}
+          <a class="highlight-link" href="{{project.git}}" target="_blank" rel="noreferrer">
+            git
+          </a>
+        {% endif %}
+        {% if project.blog %}
+        <a class="highlight-link" href="{{project.blog | prepend: site.baseurl}}"  target="_blank" rel="noreferrer">
+            blog
           </a>
         {% endif %}
         {% if project.tags %}

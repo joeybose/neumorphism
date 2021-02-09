@@ -1,4 +1,8 @@
+---
+---
+
 /* Imports */
+@charset "utf-8";
 
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
@@ -235,6 +239,16 @@ a {
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
+}
+
+.mycircle {
+ border-radius: 50%;
+ height: 100px;
+ width: 100px;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .landing-title {
